@@ -20,11 +20,6 @@ ingredients_list = st.multiselect(
     , my_dataframe,
     max_selections=5
 )
-
-
-
-
-
 if ingredients_list:
    
 
@@ -42,9 +37,6 @@ if ingredients_list:
     # if ingredients_string:
     #     session.sql(my_insert_stmt).collect()
     #     st.success('Your Smoothie is Ordered!', icon='✅')
-
-   
-
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is Ordered, '+ name_on_order)
