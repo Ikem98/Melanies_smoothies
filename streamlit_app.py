@@ -19,6 +19,10 @@ ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:'
     , my_dataframe,
     max_selections=5
+
+cnx = st.connection("snowflake")
+session = cnx.session()
+
 )
 if ingredients_list:
    
@@ -40,8 +44,6 @@ if ingredients_list:
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is Ordered, '+ name_on_order)
-cnx = st.connection("snowflake")
-session = cnx.session()
 
 
 
