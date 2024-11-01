@@ -2,9 +2,7 @@
 
 import streamlit as st
 from snowflake.snowpark.functions import col
-cnx = st.connection("snowflake")
-session = cnx.session()
-st.title(":cup_with_straw: Customize Your Smoote!:cup_with_straw:")
+st.title(":cup_with_straw: Customize Your Smoothie!:cup_with_straw:")
 st.write(
     """Choose the fruits you want in your custom Smoothie!
     """)
